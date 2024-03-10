@@ -1,0 +1,67 @@
+//1)
+var indice = 13
+var soma = 0
+var k = 0;
+
+while(k < indice){
+    k = k + 1
+    soma = soma + k
+}
+
+console.log(soma)
+// resposta 91
+
+//2)
+function fibonacci(numero){
+    var primeiroNumero = 0;
+    var segundoNumero = 1;
+    var terceiroNumero = primeiroNumero + segundoNumero
+    var array = [] 
+    while(terceiroNumero <= numero){
+        console.log(array.push(terceiroNumero))
+        primeiroNumero = segundoNumero;
+        segundoNumero = terceiroNumero;
+        terceiroNumero = primeiroNumero + segundoNumero
+    }
+    if(array.includes(numero)){
+        console.log("O número informado pertence a uma sequência de fibonacci")
+    }else{
+        console.log("O número informado não pertence a sequência")
+    }
+}
+
+// exemplo de saída: fibonacci(13) 1 2 3 4 5 6
+// O número pertence a uma sequência de fibonacci
+
+//3)
+//a) 9 -> numeros impares
+//b) 128 -> dobro do ultimo número
+//c) 49 -> quadrado dos numeros a partir do zero
+//d) 100 -> quadrado do números pares
+//e) 13 -> soma dos dois ultimos números
+//f) 20
+
+//4)
+//Acendo o interruptor 1
+//Vou para a sala das lâmpadas para visualizar qual esta acesa
+//Após a primeira ida à sala das lâmpadas é possível saber qual foi acesa pelo interruptor 1
+//Volto para a sala dos interruptores e acendo o interruptor 2
+//Após isso, retorno para a sala das lâmpadas pela segunda vez 
+//Posso visualizar qual lâmpada está acesa após acender o interruptor 2
+//Como as duas lâmpadas acessas são referentes ao interruptores 1 e 2, a última que se mantêm apagada é controlada pelo interruptor 3.
+
+
+//5)
+function virarstring(palavra){
+    var array = Array.from(palavra)
+    var novoArray = []
+    var tamanhoArray = palavra.length
+    while(tamanhoArray != 0){
+        tamanhoArray = tamanhoArray - 1
+        novoArray.push(array[tamanhoArray])
+    }
+    console.log(novoArray.toString().replaceAll(",",""))
+}
+
+//Exemplo de saída: virarstring("Dobby")
+//ybboD
